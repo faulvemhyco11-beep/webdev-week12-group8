@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{base_url}}/tokens/read-only"
+method: POST
+scripts:
+  - type: afterResponse
+    code: pm.environment.set("read_token", pm.response.json().token);
+    language: text/javascript
+order: 8000

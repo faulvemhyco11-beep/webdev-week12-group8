@@ -1,0 +1,9 @@
+$kind: http-request
+name: 'Case 7 - Access After Logout'
+url: '{{base_url}}/books'
+method: GET
+order: 17000
+auth:
+  type: bearer
+  credentials:
+    token: '{{read_token}}'

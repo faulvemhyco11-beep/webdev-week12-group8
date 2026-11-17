@@ -1,0 +1,8 @@
+name: local
+values:
+  - key: base_url
+    value: ''
+  - key: token
+    value: ''
+  - key: read_token
+    value: ''

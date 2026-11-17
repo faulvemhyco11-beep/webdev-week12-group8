@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{base_url}}/login"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"alice@example.com\",\r
+
+    \    \"password\": \"password\"\r
+
+    }"
+auth:
+  type: noauth
+scripts:
+  - type: beforeRequest
+    code: pm.environment.set("token", pm.response.json().token);
+    language: text/javascript
+order: 2000
